@@ -1,0 +1,11 @@
+{
+  "name": "p3_beraldevaulx_julien",
+  "version": "1.0.0",
+  "description": "Troisiéme projet du parcours développeur web d'OC, avec pour but de dynamiser une page web avec des animations",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./P3_beraldevaulx_julien/css/style.css"
+  },
+  "author": "julien",
+  "license": "ISC"
+}
