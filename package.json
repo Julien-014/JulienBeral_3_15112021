@@ -4,7 +4,7 @@
   "description": "Troisième projet du parcours développeur web d'OC, avec pour but de dynamiser une page web avec des animations",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./P3_beraldevaulx_julien/css/style.css"
+    "sass": "sass --watch  style.scss style.css"
   },
   "repository": {
     "type": "git",

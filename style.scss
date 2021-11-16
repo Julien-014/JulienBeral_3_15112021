@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    box-shadow: 0px 4px 3px 0px lightgrey;
+    padding: 1px ;
+    position: relative;
+}
+
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    background-color: #eaeaea;
+    padding: .2rem ;
+}
+
+.city .fas {
+   font-size: 1.3rem;
+}
+
+.city h2 {
+    font-weight: 600;
+    font-size: 1.03rem;
+    margin-right: 26px;
+}
+
+/*EXPLORATION*/
+
+.exploration {
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 0.2rem 0 3rem;
+}
+
+.exploration h2 {
+    margin-top: 2rem;
+}
+
+.exploration button {
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 1rem;
+    border-radius: 25%;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.17);
+}
+
+.exploration button:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.30);
+    opacity: 0.9;
+}
