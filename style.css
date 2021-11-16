@@ -25,28 +25,23 @@ header {
   background-color: #eaeaea;
   padding: 0.2rem;
 }
-
-.city .fas {
+.city.fas {
   font-size: 1.3rem;
 }
-
 .city h2 {
   font-weight: 600;
   font-size: 1.03rem;
   margin-right: 26px;
 }
 
-/*EXPLORATION*/
 .exploration {
   text-align: center;
   background-color: #f6f6f6;
   padding: 0.2rem 0 3rem;
 }
-
 .exploration h2 {
   margin-top: 2rem;
 }
-
 .exploration button {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
@@ -59,12 +54,70 @@ header {
   margin-top: 15px;
   box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
 }
-
 .exploration button:hover {
+  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+}
+.exploration button:hover:hover {
   transform: scale(1.02);
   cursor: pointer;
-  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.3);
-  opacity: 0.9;
+}
+
+.tutorial {
+  counter-reset: step;
+}
+.tutorial h2 {
+  padding: 0 1rem;
+  margin-top: 35px;
+}
+.tutorial ol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+.tutorial li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  width: 90%;
+  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
+}
+.tutorial li::before {
+  counter-increment: step;
+  content: counter(step);
+  color: white;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.tutorial li:hover {
+  background-color: #f5edff;
+}
+.tutorial li:hover:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.tutorial li:hover i {
+  color: #9356DC;
+}
+.tutorial li i {
+  color: #7e7e7e;
+  margin-right: 2rem;
+  font-size: 1.4rem;
+}
+.tutorial li span {
+  margin-right: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

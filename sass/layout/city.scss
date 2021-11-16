@@ -1,0 +1,17 @@
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    background-color: #eaeaea;
+    padding: .2rem ;
+     &.fas {
+       font-size: 1.3rem;
+    }
+    & h2 {
+        font-weight: 600;
+        font-size: 1.03rem;
+        margin-right: 26px;
+    }
+}

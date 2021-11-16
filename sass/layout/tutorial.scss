@@ -1,0 +1,58 @@
+@use "../tools/hover.scss" as effect;
+@use "../tools/box-shadow.scss" as shadow;
+@use "../tools/colors.scss";
+
+
+.tutorial  {
+    counter-reset: step;
+    & h2 {
+    padding: 0 1rem;
+    margin-top: 35px;
+    }
+    & ol {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style-type: none;
+    }
+    & li {
+        position: relative;
+        &::before {
+            counter-increment: step;
+            content: counter(step);
+            color: white;
+            background-color: colors.$purple;
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 1rem;
+            left: -1rem;
+        }
+        display: flex;
+        justify-content: center;
+        background-color: colors.$lightgrey;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        font-weight: 600;
+        width: 90%;
+        @include shadow.base-shadow;
+        &:hover {
+            @include effect.hover-effect;
+            background-color: #f5edff;
+        }
+        &:hover i {
+            color: colors.$purple;
+        }
+        & i {
+          color: #7e7e7e;
+          margin-right: 2rem;
+          font-size: 1.4rem;
+        } 
+        & span {
+            margin-right: 2rem;
+        }      
+    }
+}
