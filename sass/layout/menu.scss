@@ -1,12 +1,19 @@
 @use "../tools/colors.scss";
+@use "../tools/box-shadow.scss" as shadow;
+@use "../tools/hover.scss" as effect;
+@use "../tools/linear-gradient.scss" as gradient;
 
 .menu {
     background-color: colors.$lightgrey;
-    padding: 1rem 0rem 0rem 1rem;
+    padding: 1rem 0rem 4rem 1rem;
+
   &__card {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    & .card:hover {
+        @include effect.hover-effect;
+      }
   }
    &__card .new {
        position: relative;
@@ -30,15 +37,53 @@
   }
   & .card {
       width: 96%;
-      &__images {
-          height: 16rem; 
-          background-size: cover;
-          border-radius: 20px;
-      }
       @for $i from 1 through 4 {
           &__images-#{$i} {
             background-image: url("images/menu-#{$i}.jpg");
           }
       }
-  }
+      &__images {
+          height: 13rem; 
+          background-size: cover;
+          border-radius: 20px 20px 0 0;
+          @include shadow.base-shadow;
+          background-position: center 63%;
+      }
+      &__description {
+          position: relative;
+          background-color: white;
+          border-radius: 0 0 20px 20px;
+          padding-bottom: 10px;
+          @include shadow.base-shadow;
+        h3, p {
+          padding-left: 1rem;
+        }
+        h3 {
+            margin: 0;
+            padding-top: 1rem;
+        }
+        p {
+            line-height: 0;
+        }
+          i {
+              font-size: 2rem;
+              position: absolute;
+              right: 1rem;
+              top: 50%;
+              transform: translateY(-50%);
+          }
+         .fas {
+              color: transparent;
+              background-clip: text;
+              -webkit-background-clip: text;
+              opacity: 0;
+              transition: all 200ms ease-in;
+              @include gradient.gradient;
+            }
+          &:hover .fas {
+              opacity: 1;
+              transform: translateY(-50%) scale(1.2);
+          }
+        }
+    }
 }

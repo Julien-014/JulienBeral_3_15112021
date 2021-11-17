@@ -5,7 +5,7 @@
 
 .tutorial  {
     counter-reset: step;
-    padding: 1rem 0rem 4rem 1rem;
+    padding: 1rem 0rem 2rem 1rem;
     & h2 {
     margin-top: 2rem;
     }
@@ -37,7 +37,7 @@
         display: flex;
         justify-content: center;
         background-color: colors.$lightgrey;
-        padding: 1.5rem 2rem;
+        padding: 36px;
         border-radius: 1rem;
         font-weight: 600;
         width: 100%;
@@ -50,12 +50,17 @@
             color: colors.$purple;
         }
         & i {
-          color: #7e7e7e;
-          margin-right: 2rem;
-          font-size: 1.4rem;
+            color: #7e7e7e;
+            font-size: 1.4rem;
+            position: absolute;
+            left: 40px;
+            top: 24px;
         } 
         & span {
+            position: absolute;
             margin-right: 2rem;
+            left: 85px;
+            top: 26px;
         }      
     }
 }

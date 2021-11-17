@@ -1,6 +1,7 @@
 @use "../tools/box-shadow.scss" as shadow;
 @use "../tools/hover.scss" as effect;
-@use "../tools/colors.scss";
+@use "../tools/colors.scss" as colors;
+@use "../tools/linear-gradient.scss" as gradient;
 
 .exploration {
     text-align: center;
@@ -10,7 +11,7 @@
         margin-top: 2rem;
     }
     & button {
-        background-image: linear-gradient(to top, colors.$purple, colors.$pink);
+        @include gradient.gradient;
         color: white;
         font-weight: 700;
         padding: 1rem 1rem;

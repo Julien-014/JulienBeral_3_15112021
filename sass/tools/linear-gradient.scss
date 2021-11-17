@@ -1,0 +1,5 @@
+@use "../tools/colors.scss";
+
+@mixin gradient {
+    background-image: linear-gradient(to top, colors.$purple, colors.$pink);
+}
