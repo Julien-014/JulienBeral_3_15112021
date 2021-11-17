@@ -65,16 +65,18 @@ header {
 
 .tutorial {
   counter-reset: step;
+  padding: 1rem 0rem 4rem 1rem;
 }
 .tutorial h2 {
-  padding: 0 1rem;
-  margin-top: 35px;
+  margin-top: 2rem;
 }
 .tutorial ol {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   list-style-type: none;
+  margin-top: 1rem;
+  padding: 16px;
 }
 .tutorial li {
   position: relative;
@@ -84,7 +86,7 @@ header {
   padding: 1.5rem 2rem;
   border-radius: 1rem;
   font-weight: 600;
-  width: 90%;
+  width: 100%;
   box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
 }
 .tutorial li::before {
@@ -98,8 +100,9 @@ header {
   place-items: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 1rem;
+  bottom: 50%;
   left: -1rem;
+  transform: translateY(50%);
 }
 .tutorial li:hover {
   background-color: #f5edff;
@@ -118,6 +121,56 @@ header {
 }
 .tutorial li span {
   margin-right: 2rem;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 1rem 0rem 0rem 1rem;
+}
+.menu__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.menu__card .new {
+  position: relative;
+}
+.menu .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2.1rem;
+  width: 5.5rem;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  font-weight: 500;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+  top: 1rem;
+  right: 1rem;
+}
+.menu h2 {
+  margin-top: 2rem;
+}
+.menu .card {
+  width: 96%;
+}
+.menu .card__images {
+  height: 16rem;
+  background-size: cover;
+  border-radius: 20px;
+}
+.menu .card__images-1 {
+  background-image: url("images/menu-1.jpg");
+}
+.menu .card__images-2 {
+  background-image: url("images/menu-2.jpg");
+}
+.menu .card__images-3 {
+  background-image: url("images/menu-3.jpg");
+}
+.menu .card__images-4 {
+  background-image: url("images/menu-4.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+@use "../tools/colors.scss";
+
+.menu {
+    background-color: colors.$lightgrey;
+    padding: 1rem 0rem 0rem 1rem;
+  &__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+   &__card .new {
+       position: relative;
+   }
+    .new::before {
+        content: "Nouveau";
+        position: absolute ;
+        height: 2.1rem;
+        width: 5.5rem;
+        background-color: colors.$minth;
+        color: darken(colors.$minth, $amount: 35%);
+        font-weight: 500;
+        display: grid;
+        place-items: center;
+        border-radius: 2px;
+        top: 1rem;
+        right: 1rem;
+    }
+  & h2 {
+    margin-top: 2rem;
+  }
+  & .card {
+      width: 96%;
+      &__images {
+          height: 16rem; 
+          background-size: cover;
+          border-radius: 20px;
+      }
+      @for $i from 1 through 4 {
+          &__images-#{$i} {
+            background-image: url("images/menu-#{$i}.jpg");
+          }
+      }
+  }
+}
