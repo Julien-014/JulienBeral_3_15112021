@@ -1,0 +1,22 @@
+@use "../tools/colors.scss";
+@use "../tools/linear-gradient.scss" as gradient;
+@use "../tools/heart-animated.scss" as heart;
+
+header {
+    box-shadow: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+ .rest1 {
+   h2 {
+    position: relative;
+    font-family: 'Shrikhand', cursive;
+    padding: 1rem;
+    @include heart.heart-anim;
+}
+}

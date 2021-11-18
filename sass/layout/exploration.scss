@@ -27,7 +27,8 @@
         opacity: 0.8;
         @include effect.hover-effect;
     }
-    & p br {
+    & p br, 
+    & h2 br {
         @media (min-width: 800px) {
             display: none;
         }

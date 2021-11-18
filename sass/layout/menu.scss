@@ -2,6 +2,7 @@
 @use "../tools/box-shadow.scss" as shadow;
 @use "../tools/hover.scss" as effect;
 @use "../tools/linear-gradient.scss" as gradient;
+@use "../tools/heart-animated.scss" as heart;
 
 .menu {
     background-color: colors.$lightgrey;
@@ -74,25 +75,7 @@
         p {
             line-height: 0;
         }
-          i {
-              font-size: 2rem;
-              position: absolute;
-              right: 1rem;
-              top: 50%;
-              transform: translateY(-50%);
-          }
-         .fas {
-              color: transparent;
-              background-clip: text;
-              -webkit-background-clip: text;
-              opacity: 0;
-              transition: all 150ms ease-in;
-              @include gradient.gradient;
-            }
-          .fas:hover {
-              opacity: 1;
-              transform: translateY(-50%) scale(1.2);
-          }
+         @include heart.heart-anim;
         }
     }
 }

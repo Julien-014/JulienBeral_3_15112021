@@ -1,0 +1,25 @@
+@use "../tools/linear-gradient.scss" as gradient;
+@use "../tools/colors.scss";
+
+@mixin heart-anim {
+    i {
+        font-size: 1.5rem;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+   .fas {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 150ms ease-in;
+        @include gradient.gradient;
+      }
+    .fas:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.2);
+    }
+}
