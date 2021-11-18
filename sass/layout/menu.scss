@@ -5,12 +5,17 @@
 
 .menu {
     background-color: colors.$lightgrey;
-    padding: 1rem 0rem 4rem 1rem;
-
+    padding: 1rem 1rem 4rem 1rem;
   &__card {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    @media (min-width: 1024px) {
+        max-width: 1268px;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 1rem;
+    }
     & .card:hover {
         @include effect.hover-effect;
       }
@@ -34,9 +39,13 @@
     }
   & h2 {
     margin-top: 2rem;
+    @media (min-width: 1024px) {
+      max-width: 1268px;
+      margin: auto;
+      padding-top: 2rem;
+    }
   }
   & .card {
-      width: 96%;
       @for $i from 1 through 4 {
           &__images-#{$i} {
             background-image: url("images/menu-#{$i}.jpg");
@@ -77,10 +86,10 @@
               background-clip: text;
               -webkit-background-clip: text;
               opacity: 0;
-              transition: all 200ms ease-in;
+              transition: all 150ms ease-in;
               @include gradient.gradient;
             }
-          &:hover .fas {
+          .fas:hover {
               opacity: 1;
               transform: translateY(-50%) scale(1.2);
           }

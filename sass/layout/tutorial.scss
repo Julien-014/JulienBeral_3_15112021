@@ -5,7 +5,11 @@
 
 .tutorial  {
     counter-reset: step;
-    padding: 1rem 0rem 2rem 1rem;
+    padding: 1rem;
+    @media (min-width: 1024px) {
+        max-width: 1300px;
+        margin: auto;
+    }
     & h2 {
     margin-top: 2rem;
     }
@@ -15,10 +19,17 @@
         gap: 1.5rem;
         list-style-type: none;
         margin-top: 1rem;
-        padding: 16px;
+        padding: 1rem 0rem 2rem 1rem;
+        @media (min-width: 1024px) {
+        flex-direction: row;
+        gap: 2.5rem;
+        }
     }
     & li {
         position: relative;
+        @media (min-width: 1024px) {
+            width: 25rem;
+        }
         &::before {
             counter-increment: step;
             content: counter(step);
@@ -39,8 +50,7 @@
         background-color: colors.$lightgrey;
         padding: 36px;
         border-radius: 1rem;
-        font-weight: 600;
-        width: 100%;
+        font-weight: 500;
         @include shadow.base-shadow;
         &:hover {
             @include effect.hover-effect;
@@ -61,6 +71,9 @@
             margin-right: 2rem;
             left: 85px;
             top: 26px;
+            @media (max-width: 300px) {
+                top: 16px;
+            }
         }      
     }
 }

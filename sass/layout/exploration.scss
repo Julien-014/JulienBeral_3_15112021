@@ -14,7 +14,7 @@
         @include gradient.gradient;
         color: white;
         font-weight: 700;
-        padding: 1rem 1rem;
+        padding: 1rem 1.5rem;
         border-radius: 25%;
         border-radius: 2rem;
         border: none;
@@ -26,5 +26,10 @@
         box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.30);
         opacity: 0.8;
         @include effect.hover-effect;
+    }
+    & p br {
+        @media (min-width: 800px) {
+            display: none;
+        }
     }
 }

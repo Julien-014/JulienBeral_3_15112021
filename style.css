@@ -51,7 +51,7 @@ header {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   font-weight: 700;
-  padding: 1rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 25%;
   border-radius: 2rem;
   border: none;
@@ -67,10 +67,21 @@ header {
   transform: scale(1.02);
   cursor: pointer;
 }
+@media (min-width: 800px) {
+  .exploration p br {
+    display: none;
+  }
+}
 
 .tutorial {
   counter-reset: step;
-  padding: 1rem 0rem 2rem 1rem;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .tutorial {
+    max-width: 1300px;
+    margin: auto;
+  }
 }
 .tutorial h2 {
   margin-top: 2rem;
@@ -81,7 +92,13 @@ header {
   gap: 1.5rem;
   list-style-type: none;
   margin-top: 1rem;
-  padding: 16px;
+  padding: 1rem 0rem 2rem 1rem;
+}
+@media (min-width: 1024px) {
+  .tutorial ol {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
 }
 .tutorial li {
   position: relative;
@@ -90,9 +107,13 @@ header {
   background-color: #f6f6f6;
   padding: 36px;
   border-radius: 1rem;
-  font-weight: 600;
-  width: 100%;
+  font-weight: 500;
   box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
+}
+@media (min-width: 1024px) {
+  .tutorial li {
+    width: 25rem;
+  }
 }
 .tutorial li::before {
   counter-increment: step;
@@ -132,15 +153,28 @@ header {
   left: 85px;
   top: 26px;
 }
+@media (max-width: 300px) {
+  .tutorial li span {
+    top: 16px;
+  }
+}
 
 .menu {
   background-color: #f6f6f6;
-  padding: 1rem 0rem 4rem 1rem;
+  padding: 1rem 1rem 4rem 1rem;
 }
 .menu__card {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .menu__card {
+    max-width: 1268px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem;
+  }
 }
 .menu__card .card:hover:hover {
   transform: scale(1.02);
@@ -166,8 +200,12 @@ header {
 .menu h2 {
   margin-top: 2rem;
 }
-.menu .card {
-  width: 96%;
+@media (min-width: 1024px) {
+  .menu h2 {
+    max-width: 1268px;
+    margin: auto;
+    padding-top: 2rem;
+  }
 }
 .menu .card__images-1 {
   background-image: url("images/menu-1.jpg");
@@ -217,10 +255,10 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
-.menu .card__description:hover .fas {
+.menu .card__description .fas:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
 }
@@ -234,6 +272,20 @@ footer h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
   font-size: larger;
+}
+@media (min-width: 1024px) {
+  footer h2 {
+    max-width: 1280px;
+    margin: auto;
+    padding: 1rem 0rem 0.5rem 0rem;
+  }
+}
+@media (min-width: 1024px) {
+  footer p {
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 0.5rem;
+  }
 }
 footer i {
   padding-right: 1rem;
