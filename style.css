@@ -301,16 +301,28 @@ header {
   padding: 0;
 }
 
-img {
+.menu-banner img {
   max-width: 100%;
+  width: 100%;
+  max-height: 32rem;
+  object-fit: cover;
+  display: block;
 }
 
-.rest1 h2 {
+.title {
+  margin-top: -5rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+  background-color: #f6f6f6;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.title h2 {
+  padding: 2rem 1rem 1rem 1rem;
   position: relative;
   font-family: "Shrikhand", cursive;
-  padding: 1rem;
+  font-weight: 500;
 }
-.rest1 h2 i {
+.title h2 i {
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
@@ -318,7 +330,7 @@ img {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.rest1 h2 .fas {
+.title h2 .fas {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -326,9 +338,80 @@ img {
   transition: all 150ms ease-in;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
-.rest1 h2 .fas:hover {
+.title h2 .fas:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
+}
+.title h2 i {
+  right: 2rem;
+  top: 56%;
+}
+
+.menus {
+  padding: 0 1rem;
+  background-color: #f6f6f6;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  position: relative;
+  margin-top: -3rem;
+}
+.menus h3 {
+  font-weight: 400;
+}
+.menus h4, .menus p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus__card {
+  overflow: hidden;
+}
+.menus .menu-item {
+  background-color: white;
+  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.menus .menu-item__price {
+  margin-left: auto;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+.menus .menu-item__description {
+  padding: 1rem;
+  overflow: hidden;
+}
+.menus .menu-item__check {
+  background-color: #99E2D0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 500ms;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.menus .menu-item__check i {
+  color: white;
+  font-size: 1.5rem;
+}
+.menus .menu-item:hover .menu-item__check {
+  margin-right: 0;
+}
+.menus .menu-item:hover i {
+  animation: animate-spin 0.5s ease-in-out;
+}
+@keyframes animate-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
