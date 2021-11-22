@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    @media (min-width: 1024px) {
+    @media (min-width: 766px) {
         max-width: 1268px;
         margin: auto;
         grid-template-columns: 1fr 1fr;
@@ -49,7 +49,7 @@
   & .card {
       @for $i from 1 through 4 {
           &__images-#{$i} {
-            background-image: url("images/menu-#{$i}.jpg");
+            background-image: url("images/menu-#{$i}new.jpg");
           }
       }
       &__images {

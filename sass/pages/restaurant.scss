@@ -6,6 +6,7 @@
 @use "../tools/buttons.scss";
 @use "../tools/icon.scss";
 
+
 #page-menu {
     header {
     box-shadow: none;
@@ -84,12 +85,20 @@
        border-radius: 1rem;
        margin-bottom: 1rem;
     }
-    .menu-item {
-        background-color: white;
-        @include box-shadow.base-shadow;
-        display: flex;
-        border-radius: 1rem;
-        overflow: hidden;
+}
+.menu-item {
+    background-color: white;
+    @include box-shadow.base-shadow;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    animation: appearance 1s;
+    animation-fill-mode: both;
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+        }       
+        }
         &__price {
             margin-left: auto;
             font-weight: bold;
@@ -131,7 +140,7 @@
         }
     }
     }
-}
+
 
 .order {
    height: 22vh;
