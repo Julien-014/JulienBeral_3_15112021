@@ -20,6 +20,9 @@ header {
   padding: 1px;
   position: relative;
 }
+header h1 {
+  margin: 0.5rem;
+}
 
 .city {
   display: flex;
@@ -49,6 +52,7 @@ header {
 }
 .exploration button {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  cursor: pointer;
   color: white;
   font-weight: 700;
   padding: 1rem 1.5rem;
@@ -296,33 +300,50 @@ footer a:hover {
   text-decoration: underline;
 }
 
-header {
+#page-menu header {
   box-shadow: none;
   padding: 0;
 }
-
-.menu-banner img {
+#page-menu header::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "\f060";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+#page-menu header h1 {
+  margin: 0.5rem;
+}
+#page-menu .menu-banner img {
   max-width: 100%;
   width: 100%;
   max-height: 32rem;
   object-fit: cover;
   display: block;
 }
-
-.title {
+#page-menu .title {
   margin-top: -5rem;
   border-radius: 2.5rem 2.5rem 0 0;
   background-color: #f6f6f6;
   position: relative;
   padding-bottom: 1rem;
 }
-.title h2 {
+#page-menu .title h2 {
   padding: 2rem 1rem 1rem 1rem;
   position: relative;
   font-family: "Shrikhand", cursive;
   font-weight: 500;
 }
-.title h2 i {
+#page-menu .title h2 i {
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
@@ -330,7 +351,7 @@ header {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.title h2 .fas {
+#page-menu .title h2 .fas {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -338,55 +359,72 @@ header {
   transition: all 150ms ease-in;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
-.title h2 .fas:hover {
+#page-menu .title h2 .fas:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
 }
-.title h2 i {
+#page-menu .title h2 i {
   right: 2rem;
   top: 56%;
 }
-
-.menus {
+#page-menu .menus {
   padding: 0 1rem;
   background-color: #f6f6f6;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
   position: relative;
   margin-top: -3rem;
 }
-.menus h3 {
+#page-menu .menus h3 {
   font-weight: 400;
+  position: relative;
+  margin: 2rem 0rem 1.25rem 0rem;
 }
-.menus h4, .menus p {
+#page-menu .menus h3::after {
+  content: "";
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  top: 25px;
+}
+#page-menu .menus h4, #page-menu .menus p {
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menus__card {
+#page-menu .menus__card {
   overflow: hidden;
+  box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
-.menus .menu-item {
+#page-menu .menus .menu-item {
   background-color: white;
   box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
   display: flex;
   border-radius: 1rem;
   overflow: hidden;
 }
-.menus .menu-item__price {
+#page-menu .menus .menu-item__price {
   margin-left: auto;
   font-weight: bold;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
 }
-.menus .menu-item__description {
+#page-menu .menus .menu-item__description {
   padding: 1rem;
   overflow: hidden;
+  display: grid;
+  gap: 0.3rem;
 }
-.menus .menu-item__check {
+#page-menu .menus .menu-item__description h4 {
+  font-size: larger;
+}
+#page-menu .menus .menu-item__check {
   background-color: #99E2D0;
   margin-right: -4rem;
   width: 4rem;
@@ -395,14 +433,17 @@ header {
   place-items: center;
   flex-shrink: 0;
 }
-.menus .menu-item__check i {
+#page-menu .menus .menu-item__check i {
   color: white;
   font-size: 1.5rem;
 }
-.menus .menu-item:hover .menu-item__check {
+#page-menu .menus .menu-item:hover {
+  cursor: pointer;
+}
+#page-menu .menus .menu-item:hover .menu-item__check {
   margin-right: 0;
 }
-.menus .menu-item:hover i {
+#page-menu .menus .menu-item:hover i {
   animation: animate-spin 0.5s ease-in-out;
 }
 @keyframes animate-spin {
@@ -412,6 +453,35 @@ header {
   100% {
     transform: rotate(0);
   }
+}
+#page-menu .order {
+  height: 22vh;
+  background-color: #f6f6f6;
+  display: grid;
+  place-items: center;
+}
+#page-menu .order button {
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: 25%;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  margin-top: 15px;
+  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
+  padding: 1rem 3rem;
+  margin-bottom: 3rem;
+}
+#page-menu .order button:hover {
+  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+}
+#page-menu .order button:hover:hover {
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

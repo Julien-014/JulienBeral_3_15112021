@@ -1,0 +1,23 @@
+@use "../tools/colors.scss";
+@use "../tools/linear-gradient.scss" as gradient;
+@use "../tools/box-shadow.scss" as shadow;
+@use "../tools/hover.scss" as effect;
+
+@mixin main-button {
+    @include gradient.gradient;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    border-radius: 25%;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    @include shadow.base-shadow;
+    &:hover {
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.30);
+        opacity: 0.8;
+        @include effect.hover-effect;
+    }
+}

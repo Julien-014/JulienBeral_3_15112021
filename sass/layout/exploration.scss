@@ -2,6 +2,7 @@
 @use "../tools/hover.scss" as effect;
 @use "../tools/colors.scss" as colors;
 @use "../tools/linear-gradient.scss" as gradient;
+@use "../tools/buttons.scss";
 
 .exploration {
     text-align: center;
@@ -11,21 +12,7 @@
         margin-top: 2rem;
     }
     & button {
-        @include gradient.gradient;
-        color: white;
-        font-weight: 700;
-        padding: 1rem 1.5rem;
-        border-radius: 25%;
-        border-radius: 2rem;
-        border: none;
-        font-size: 1rem;
-        margin-top: 15px;
-        @include shadow.base-shadow;
-    }
-    & button:hover {
-        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.30);
-        opacity: 0.8;
-        @include effect.hover-effect;
+        @include buttons.main-button;
     }
     & p br, 
     & h2 br {
