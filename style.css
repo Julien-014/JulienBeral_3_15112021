@@ -77,6 +77,41 @@ header h1 {
   }
 }
 
+.loader {
+  display: grid;
+  position: fixed;
+  place-items: center;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: loading-spinner 500ms 2s forwards;
+}
+.loader::after {
+  content: "";
+  height: 90px;
+  width: 90px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: spinner 1s infinite linear;
+  animation-iteration-count: 2;
+}
+
+@keyframes loading-spinner {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .tutorial {
   counter-reset: step;
   padding: 1rem;
@@ -310,50 +345,91 @@ footer a:hover {
     opacity: 1;
   }
 }
-#page-menu header {
+.anim-1 {
+  animation-delay: 0.1s;
+}
+
+.anim-2 {
+  animation-delay: 0.2s;
+}
+
+.anim-3 {
+  animation-delay: 0.3s;
+}
+
+.anim-4 {
+  animation-delay: 0.4s;
+}
+
+.anim-5 {
+  animation-delay: 0.5s;
+}
+
+.anim-6 {
+  animation-delay: 0.6s;
+}
+
+.anim-7 {
+  animation-delay: 0.7s;
+}
+
+.anim-8 {
+  animation-delay: 0.8s;
+}
+
+.anim-9 {
+  animation-delay: 0.9s;
+}
+
+#page header {
   box-shadow: none;
   padding: 0;
 }
-#page-menu header::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1;
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 900;
-  content: "\f060";
+@media (min-width: 1024px) {
+  #page header {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+#page header a {
   position: absolute;
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.5rem;
 }
-#page-menu header h1 {
+#page header h1 {
   margin: 0.5rem;
 }
-#page-menu .menu-banner img {
+#page .menu-banner img {
   max-width: 100%;
   width: 100%;
   max-height: 32rem;
   object-fit: cover;
   display: block;
 }
-#page-menu .title {
+#page .title {
   margin-top: -5rem;
   border-radius: 2.5rem 2.5rem 0 0;
   background-color: #f6f6f6;
   position: relative;
   padding-bottom: 1rem;
 }
-#page-menu .title h2 {
+@media (min-width: 1024px) {
+  #page .title {
+    max-width: 900px;
+    margin: auto;
+    height: 8vh;
+    margin-top: -5rem;
+  }
+}
+#page .title h2 {
   padding: 2rem 1rem 1rem 1rem;
   position: relative;
   font-family: "Shrikhand", cursive;
   font-weight: 500;
 }
-#page-menu .title h2 i {
+#page .title h2 i {
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
@@ -361,7 +437,7 @@ footer a:hover {
   transform: translateY(-50%);
   cursor: pointer;
 }
-#page-menu .title h2 .fas {
+#page .title h2 .fas {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -369,15 +445,15 @@ footer a:hover {
   transition: all 150ms ease-in;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
-#page-menu .title h2 .fas:hover {
+#page .title h2 .fas:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
 }
-#page-menu .title h2 i {
+#page .title h2 i {
   right: 2rem;
   top: 56%;
 }
-#page-menu .menus {
+#page .menus {
   padding: 0 1rem;
   background-color: #f6f6f6;
   display: grid;
@@ -385,12 +461,18 @@ footer a:hover {
   position: relative;
   margin-top: -3rem;
 }
-#page-menu .menus h3 {
+@media (min-width: 1024px) {
+  #page .menus {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+#page .menus h3 {
   font-weight: 400;
   position: relative;
   margin: 2rem 0rem 1.25rem 0rem;
 }
-#page-menu .menus h3::after {
+#page .menus h3::after {
   content: "";
   height: 0.25rem;
   width: 3rem;
@@ -399,53 +481,72 @@ footer a:hover {
   left: 0;
   top: 25px;
 }
-#page-menu .menus h4, #page-menu .menus p {
+#page .menus h4, #page .menus p {
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#page-menu .menus__card {
+#page .menus .menus__card {
   overflow: hidden;
   box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   margin-bottom: 1rem;
+  animation: appearance 1s;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }
-#page-menu .menu-item {
+#page .menus .menus__card.anim-1 {
+  animation-delay: 0.1s;
+}
+#page .menus .menus__card.anim-2 {
+  animation-delay: 0.2s;
+}
+#page .menus .menus__card.anim-3 {
+  animation-delay: 0.3s;
+}
+#page .menus .menus__card.anim-4 {
+  animation-delay: 0.4s;
+}
+#page .menus .menus__card.anim-5 {
+  animation-delay: 0.5s;
+}
+#page .menus .menus__card.anim-6 {
+  animation-delay: 0.6s;
+}
+#page .menus .menus__card.anim-7 {
+  animation-delay: 0.7s;
+}
+#page .menus .menus__card.anim-8 {
+  animation-delay: 0.8s;
+}
+#page .menus .menus__card.anim-9 {
+  animation-delay: 0.9s;
+}
+#page .menu-item {
   background-color: white;
   box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.17);
   display: flex;
   border-radius: 1rem;
   overflow: hidden;
-  animation: appearance 1s;
-  animation-fill-mode: both;
 }
-#page-menu .menu-item:nth-child(1) {
-  animation-delay: 100ms;
-}
-#page-menu .menu-item:nth-child(2) {
-  animation-delay: 200ms;
-}
-#page-menu .menu-item:nth-child(3) {
-  animation-delay: 300ms;
-}
-#page-menu .menu-item__price {
+#page .menu-item__price {
   margin-left: auto;
   font-weight: bold;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
 }
-#page-menu .menu-item__description {
+#page .menu-item__description {
   padding: 1rem;
   overflow: hidden;
   display: grid;
   gap: 0.3rem;
 }
-#page-menu .menu-item__description h4 {
+#page .menu-item__description h4 {
   font-size: larger;
 }
-#page-menu .menu-item__check {
+#page .menu-item__check {
   background-color: #99E2D0;
   margin-right: -4rem;
   width: 4rem;
@@ -454,17 +555,17 @@ footer a:hover {
   place-items: center;
   flex-shrink: 0;
 }
-#page-menu .menu-item__check i {
+#page .menu-item__check i {
   color: white;
   font-size: 1.5rem;
 }
-#page-menu .menu-item:hover {
+#page .menu-item:hover {
   cursor: pointer;
 }
-#page-menu .menu-item:hover .menu-item__check {
+#page .menu-item:hover .menu-item__check {
   margin-right: 0;
 }
-#page-menu .menu-item:hover i {
+#page .menu-item:hover i {
   animation: animate-spin 0.5s ease-in-out;
 }
 @keyframes animate-spin {
@@ -475,13 +576,19 @@ footer a:hover {
     transform: rotate(0);
   }
 }
-#page-menu .order {
+#page .order {
   height: 22vh;
   background-color: #f6f6f6;
   display: grid;
   place-items: center;
 }
-#page-menu .order button {
+@media (min-width: 1024px) {
+  #page .order {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+#page .order button {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   cursor: pointer;
   color: white;
@@ -496,13 +603,27 @@ footer a:hover {
   padding: 1rem 3rem;
   margin-bottom: 3rem;
 }
-#page-menu .order button:hover {
+#page .order button:hover {
   box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
 }
-#page-menu .order button:hover:hover {
+#page .order button:hover:hover {
   transform: scale(1.02);
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  #page footer h2 {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem 0rem 0.5rem 0rem;
+  }
+}
+@media (min-width: 1024px) {
+  #page footer p {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

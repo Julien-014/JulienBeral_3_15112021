@@ -6,14 +6,15 @@
 @use "../tools/buttons.scss";
 @use "../tools/icon.scss";
 
-
-#page-menu {
+  #page {
     header {
     box-shadow: none;
     padding: 0;
-    &::before {
-    @include icon.font-awesome;
-    content: "\f060";
+    @media (min-width: 1024px) {
+      max-width: 900px;
+      margin: auto;
+    }
+    & a {
     position: absolute;
     left: 1rem;
     top: 50%;
@@ -24,6 +25,7 @@
         margin: 0.5rem;
     }
 }
+
 
 .menu-banner img {
     max-width: 100%;
@@ -39,6 +41,12 @@
      background-color: colors.$lightgrey;
      position: relative;
      padding-bottom: 1rem;
+     @media (min-width: 1024px) {
+      max-width: 900px;
+      margin: auto;
+      height: 8vh;
+      margin-top: -5rem;
+     }
      h2 {  
     padding: 2rem 1rem 1rem 1rem;
     position: relative;
@@ -59,6 +67,10 @@
     grid-template-columns: 1fr;
     position: relative;
     margin-top: -3rem;
+    @media (min-width: 1024px) {
+      max-width: 900px;
+      margin: auto;
+    }
     & h3 {
         font-weight: 400;
         position: relative;
@@ -79,26 +91,50 @@
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    &__card {
+
+    & .menus__card {
        overflow: hidden; 
        box-shadow: 2px 3px 7px 0px rgb(0 0 0 / 10%);
        border-radius: 1rem;
        margin-bottom: 1rem;
+       animation: appearance 1s ;
+       animation-fill-mode: both;
+       animation-duration: 1s;
+      &.anim-1{
+        animation-delay: 0.1s;
+      }
+      &.anim-2{
+        animation-delay: 0.2s;
+      }
+      &.anim-3{
+        animation-delay: 0.3s;
+      }
+      &.anim-4{
+        animation-delay: 0.4s;
+      }
+      &.anim-5{
+        animation-delay: 0.5s;
+      }
+      &.anim-6{
+        animation-delay: 0.6s;
+      }
+      &.anim-7{
+        animation-delay: 0.7s;
+      }
+      &.anim-8{
+        animation-delay: 0.8s;
+      }
+      &.anim-9{
+        animation-delay: 0.9s;
+      }
+      }
     }
-}
 .menu-item {
     background-color: white;
     @include box-shadow.base-shadow;
     display: flex;
     border-radius: 1rem;
     overflow: hidden;
-    animation: appearance 1s;
-    animation-fill-mode: both;
-    @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-            animation-delay: 100ms * $i;
-        }       
-        }
         &__price {
             margin-left: auto;
             font-weight: bold;
@@ -147,10 +183,31 @@
    background-color: colors.$lightgrey;
    display: grid;
    place-items: center;
+   @media (min-width: 1024px) {
+    max-width: 900px;
+    margin: auto;
+   }
    button {
        @include buttons.main-button;
        padding: 1rem 3rem;
        margin-bottom: 3rem;
    }
+}
+
+footer {
+  & h2 {
+  @media (min-width: 1024px) {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem 0rem 0.5rem 0rem;
+  }
+  }
+  & p {
+    @media (min-width: 1024px) {
+        max-width: 900px;
+        margin: auto;
+        padding-top: 0.5rem;
+    }
+}
 }
 }
