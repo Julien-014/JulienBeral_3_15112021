@@ -387,7 +387,7 @@ footer a:hover {
 }
 @media (min-width: 1024px) {
   #page header {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
   }
 }
@@ -404,9 +404,14 @@ footer a:hover {
 #page .menu-banner img {
   max-width: 100%;
   width: 100%;
-  max-height: 32rem;
+  height: 20rem;
   object-fit: cover;
   display: block;
+}
+@media (min-width: 1024px) {
+  #page .menu-banner img {
+    height: 30rem;
+  }
 }
 #page .title {
   margin-top: -5rem;
@@ -417,7 +422,7 @@ footer a:hover {
 }
 @media (min-width: 1024px) {
   #page .title {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     height: 8vh;
     margin-top: -5rem;
@@ -463,7 +468,7 @@ footer a:hover {
 }
 @media (min-width: 1024px) {
   #page .menus {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
   }
 }
@@ -584,7 +589,7 @@ footer a:hover {
 }
 @media (min-width: 1024px) {
   #page .order {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
   }
 }
@@ -613,14 +618,14 @@ footer a:hover {
 }
 @media (min-width: 1024px) {
   #page footer h2 {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 1rem 0rem 0.5rem 0rem;
   }
 }
 @media (min-width: 1024px) {
   #page footer p {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding-top: 0.5rem;
   }
