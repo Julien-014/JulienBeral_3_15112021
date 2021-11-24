@@ -86,7 +86,7 @@ header h1 {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: loading-spinner 500ms 2s both;
+  animation: loading 500ms 2s both;
 }
 .loader::after {
   content: "";
@@ -99,7 +99,7 @@ header h1 {
   animation-iteration-count: 2;
 }
 
-@keyframes loading-spinner {
+@keyframes loading {
   100% {
     opacity: 0;
     z-index: -10;
