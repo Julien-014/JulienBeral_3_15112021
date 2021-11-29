@@ -155,20 +155,20 @@
             }
         }
         &__check {
-            $button-width: 4rem;
-            background-color: colors.$minth;
-            margin-right: -$button-width;
-            width: $button-width;
-            transition: margin-right 500ms;
-            display: grid;
-            place-items: center;
-            flex-shrink: 0;
-            & i {
-               color: white;
-               font-size: 1.5rem;
-            }
+          $button-width: 4rem;
+          background-color: colors.$minth;
+          margin-right: -$button-width;
+          width: $button-width;
+          transition: margin-right 500ms;
+          display: grid;
+          place-items: center;
+          flex-shrink: 0;
+          & i {
+             color: white;
+             font-size: 1.5rem;
+          }
         }
-        &:hover  {   
+        &:hover {   
             cursor: pointer;      
         .menu-item__check  {
          margin-right: 0;
@@ -213,4 +213,4 @@ footer {
     }
 }
 }
-}
+  }
