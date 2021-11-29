@@ -13,6 +13,7 @@
   "author": "julien",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "2.5.0",
     "sass": "^1.43.4"
   }
 }
